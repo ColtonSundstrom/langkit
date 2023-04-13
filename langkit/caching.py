@@ -41,7 +41,7 @@ class Cache:
         :param str content: Content for the cache entry to test.
         :rtype: bool
         """
-        m = hashlib.md5()
+        m = hashlib.md5(usedforsecurity=False)
         m.update(content.encode('utf-8'))
         new_hash = m.hexdigest()
 
